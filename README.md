@@ -12,9 +12,20 @@ sudo vi /etc/hosts
 add the following
 
 ```
-127.0.0.1 rentify.test
-127.0.0.1 api.rentify.test
-127.0.0.1 www.rentify.test
+192.168.33.10 rentify.test
+192.168.33.10 api.rentify.test
+192.168.33.10 www.rentify.test
 ```
 
-Will most likely need to uninstall or kill pow on host. Can also use rentify.local instead of rentify.test
+Will maybe need to uninstall or kill pow on host if its running. Can also use rentify.local instead of rentify.test
+
+rentify is automatically available on http://rentify.test
+
+To start inventory app
+```
+vagrant ssh
+cd InventoryBase
+make start
+```
+
+inventory is then available on http://192.168.33.10/addresses
